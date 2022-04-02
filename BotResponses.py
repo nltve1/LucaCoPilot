@@ -16,6 +16,11 @@ def getWeather(city):
     return responseJSON["main"]["temp"]
 
 
+def set_cnt():
+    global cnt
+    cnt = 1
+
+
 def bot_response(message):
     global cnt
     if cnt == 1:

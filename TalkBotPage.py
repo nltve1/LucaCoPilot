@@ -2,7 +2,7 @@ import flask
 from flask import render_template, request
 
 # My flask app
-from BotResponses import bot_response
+from BotResponses import bot_response, set_cnt
 
 app = flask.Flask(__name__)
 
@@ -15,6 +15,7 @@ def home():
 # Bot
 @app.route('/bot')
 def form():
+    set_cnt()
     return flask.render_template('bot.html')
 
 
